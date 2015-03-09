@@ -2162,13 +2162,17 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 	.menu-main{
 		position: absolute !important;
 		right: 10px;
-		top: 20px;	
+		top: 10px;	
 	 }
 	 
 	 h4.user{
 		text-overflow: ellipsis !important; 
 		white-space: nowrap;
 		width: 45% !important;
+	 }
+	 
+	 .welcome{
+		margin-top: 10px !important;
 	 }
 
  
