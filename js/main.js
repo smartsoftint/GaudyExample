@@ -4,15 +4,16 @@
     $(".menu-main").tapend(function(e){
 		
         //e.stopPropagation();
+		$('.allMenu').css({"width" : "80%" });
 		$('#menuAppriz').css({"display" : "block"});
-		$('.allMenu').velocity({"width" : "80%" },{ duration: 500 });
+		$('.allMenu').velocity({"right" : "0px" },{ duration: 500 });
 		
   
     });
 	
     $('.bgModal').tapend(function(e){
         $('#menuAppriz').fadeOut(300);
-		$('.allMenu').css({"width" : "0px"});
+		$('.allMenu').css({"right" : "-80%"});
 		
     });
 	

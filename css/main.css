@@ -1196,11 +1196,11 @@ nav.categoryNav .icon-myAlerts .path1:before {
 
 .allMenu {
     background: #FFFFFF;
-    width: 0%;
+    width: 80%;
     height: 100%;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0px;
+    right: -80%;
     z-index: 4000;
 }
 
@@ -1701,7 +1701,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 @media (max-width: 769px) {
 
     .allMenu {
-        width: 0%;
+        width: 80%;
     }
 
     .allCategory {
@@ -2126,7 +2126,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     }
 
     .allMenu {
-        width: 0;
+        width: 80%;
     }
 
     .contentMenu ul li button .icon1 {
