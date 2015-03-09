@@ -617,6 +617,8 @@ input, .btnAction {
     right: -4px;
     font-size: 69px;
     top: -5px;
+	
+	
 }
 
 .btnAction .icon-arrow .path1 {
@@ -878,7 +880,7 @@ label.css-label {
 }
 
 #categories li {
-    width: 100%;
+    width: calc(100% + 150px);
     overflow: hidden;
     height: 84px;
     border-bottom: 1px solid #e5e5e5;
@@ -888,7 +890,7 @@ label.css-label {
 
 #categories li .infoBank {
     float: left;
-    width: 82%;
+    width: calc(82% - 150px);
 
 }
 
@@ -944,7 +946,7 @@ label.css-label {
     border: none;
     background: none;
     position: absolute;
-    right: 5px;
+    right: calc(150px + 5px);
     z-index: 1000;
     top: 16px;
 }
@@ -985,7 +987,7 @@ label.css-label {
     z-index: 2000;
     right: 0;
     height: 100%;
-    width: 36%;
+    width: 150px;
     top: 0;
     opacity: 0.98;
 }
@@ -2184,6 +2186,11 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+
+.Msg_info{
+	calc(100% - 150px) !important;
 }
 
  

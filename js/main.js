@@ -17,13 +17,20 @@
 		
     });
 	
-	
 	//MSG Swipped 
-	$( document ).on("swipeend", ".Message *" ,function(a,b,c){
+	$( document ).on("swipe", ".Message" ,function(a,b,c){
 			console.log(JSON.stringify(b));
+	
+	if(b["startEvnt"]["position"]["x"] > b["endEvnt"]["position"]["x"]){
 		if(b["xAmount"] > 150){
-			alert(JSON.stringify(b));
+				$(this).css({"transform" : "translateX(-150px)"});
+		}else{
+					$(this).css({"transform" : "translateX("+(b["xAmount"]*-1)+"px)"});
 		}
+	}
+	else{
+		
+	}
 	});
 	
 	
