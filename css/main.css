@@ -866,7 +866,8 @@ label.css-label {
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow: auto;
+    overflow-x: hidden;
+	overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     position: relative;
     z-index: 900;
