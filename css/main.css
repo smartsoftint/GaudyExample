@@ -1196,7 +1196,7 @@ nav.categoryNav .icon-myAlerts .path1:before {
 
 .allMenu {
     background: #FFFFFF;
-    width: 40%;
+    width: 0%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -1701,7 +1701,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 @media (max-width: 769px) {
 
     .allMenu {
-        width: 85%;
+        width: 0%;
     }
 
     .allCategory {
@@ -2126,7 +2126,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     }
 
     .allMenu {
-        width: 94%;
+        width: 0;
     }
 
     .contentMenu ul li button .icon1 {
@@ -2151,18 +2151,24 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     }
 }
 
- img.bankLogo{
-position: absolute;
-top: 50%;
-margin: -20px auto auto;
-max-height: 80px !important;
-max-width: calc(100% - 100px) !important;
- }
+	img.bankLogo{
+		position: absolute;
+		top: 50%;
+		margin: -20px auto auto;
+		max-height: 80px !important;
+		max-width: calc(100% - 100px) !important;
+	 }
  
-  .menu-main{
-	position: absolute !important;
-	right: 10px;
-	top: 20px;
-	
- }
+	.menu-main{
+		position: absolute !important;
+		right: 10px;
+		top: 20px;	
+	 }
+	 
+	 h4.user{
+		text-overflow: ellipsis !important; 
+		white-space: nowrap;
+		width: 45% !important;
+	 }
 
+ 
