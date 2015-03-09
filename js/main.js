@@ -19,7 +19,7 @@
 	
 	
 	//MSG Swipped 
-	$( document ).on("swipeleft", ".Message" ,function(a,b,c){
+	$( document ).on("swipeend", ".Message *" ,function(a,b,c){
 			console.log(JSON.stringify(b));
 		if(b["xAmount"] > 150){
 			alert(JSON.stringify(b));
