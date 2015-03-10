@@ -880,7 +880,8 @@ label.css-label {
 }
 
 #categories li {
-    width: calc(100% + 150px);
+    width: calc(100%);
+	
     overflow: hidden;
     height: 84px;
     border-bottom: 1px solid #e5e5e5;
@@ -983,7 +984,7 @@ label.css-label {
     font-size: 1.04em;
     text-transform: uppercase;
     border: none;
-    position: absolute;
+   margin-left: 22px;
     z-index: 2000;
     right: 0;
     height: 100%;
@@ -995,8 +996,42 @@ label.css-label {
 #categories .details {
     background: #e8e8e8;
     padding: 2%;
-    width: 96%;
+    width: 100%;
+	position: absolute;
+	top: calc(-22% - 0px);
+	left: 0px;
+	width: calc(100% - 20px);
+	height: 124px;
+	padding-left: 20px;
+	padding-right:20px;
+	
 }
+
+#categories .centralLI {
+	position: absolute;
+	top: 0px;
+	left: calc(100% + 20px);
+	width: calc(100% + 150px);
+}
+
+#categories .rightLI {
+	position: absolute;
+	top: calc(-22% - 0px);
+	height: 104px;
+	left: 200%;
+	width: 150px;
+	
+
+}
+
+#categories  .moveContainer{
+position: relative;
+width: 100%;
+left: calc(-100% - 21px);
+overflow: visible;
+height: 84px;
+}
+
 
 #categories .details h3 {
     color: #005b99;
@@ -1008,6 +1043,9 @@ label.css-label {
     word-wrap: break-word;
     max-height: 3.6em;
     line-height: 20px;
+	
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #categories .details .dateBank {

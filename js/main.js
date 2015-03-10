@@ -19,18 +19,41 @@
 	
 	//MSG Swipped 
 	$( document ).on("swipe", ".Message" ,function(a,b,c){
+		
+		var mContainer = $(this).find(".moveContainer");
 			console.log(JSON.stringify(b));
 	
+	//This will be for show the delete button 
 	if(b["startEvnt"]["position"]["x"] > b["endEvnt"]["position"]["x"]){
 		if(b["xAmount"] > 150){
-				$(this).css({"transform" : "translateX(-150px)"});
+				mContainer.css({"margin-left" : "-150px"});
 		}else{
-					$(this).css({"transform" : "translateX("+(b["xAmount"]*-1)+"px)"});
+					mContainer.css({"margin-left" : (b["xAmount"]*-1)+"px"});
 		}
 	}
+	//This could be to show the detail or hide the delete button
 	else{
 		
+			mContainer.css({"margin-left" : b["xAmount"]+"px","overflow-x" :"visible"});
+		
 	}
+	});
+	
+	$( document ).on("swipeend", ".Message" ,function(a,b,c){
+		var mContainer = $(this).find(".moveContainer");
+		if(b["startEvnt"]["position"]["x"] > b["endEvnt"]["position"]["x"]){
+			if(b["xAmount"] < 151 &&  1){
+				mContainer.velocity({"margin-left" : "0px"});
+			}
+		}
+		else{
+			if(b["xAmount"] > 150){
+				
+				mContainer.velocity({"margin-left" : window.innerWidth+"px"},{ duration: 500 });
+			}else{
+				mContainer.velocity({"margin-left" : "0px"});
+			}
+		}
 	});
 	
 	

@@ -582,7 +582,7 @@
                     swipedir = 'swipedown';
                 }
                 if (originalCoord.x > finalCoord.x && (originalCoord.x - finalCoord.x > h_threshold)) {
-                    swipedir = 'swipeleft0';
+                    swipedir = 'swipeleft';
                 }
                 if (swipedir != undefined && started) {
                     originalCoord.x = 0;
