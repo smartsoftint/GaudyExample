@@ -77,6 +77,17 @@
 		//$(this).css({content: "\e60b",color: tabSelectedColor});
 	});
 	
+	
+	
+	//Menu Nav
+	
+	$( document ).on("tapend",'.navAppriz li',function(){
+		$($(".navAppriz .active").find("a").attr("menu-page")).hide();
+		$(".navAppriz .active").removeClass("active");
+		$(this).addClass("active");
+		$($(this).find("a").attr("menu-page")).show();
+	});
+	
 })(jQuery);
 
 
