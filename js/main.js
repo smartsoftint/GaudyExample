@@ -1,5 +1,6 @@
 (function($) {
-	
+	var tabSelectedColor 	= "rgb(0, 91, 153)";
+	var tabUnSelectedColor 	= "rgb(213, 212, 211)";
 	//Main Menu handle
     $(".menu-main").tapend(function(e){
 		
@@ -57,6 +58,24 @@
 	});
 	
 	
+	//Filter handle
+	
+	$( document ).on("tapend",'nav.categoryNav span',function(){
+		if( $(this).css("color") == tabSelectedColor){
+			$(this).css({content: "\e60b",color: tabUnSelectedColor});
+			$(this).find('.path1::before').css({color: tabUnSelectedColor});
+		
+		}else{
+			$(this).css({content: "\e60b",color: tabSelectedColor});
+			$(this).find('.path1').css({color: tabSelectedColor});
+		}
+	});
+	
+	$( document ).on("taphold",'nav.categoryNav span',function(){
+		$('nav.categoryNav span').css({content: "\e60b",color: tabUnSelectedColor});
+		$(this).find('.path1::before').css({color: tabUnSelectedColor});
+		//$(this).css({content: "\e60b",color: tabSelectedColor});
+	});
 	
 })(jQuery);
 

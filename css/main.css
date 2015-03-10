@@ -1078,7 +1078,7 @@ height: 84px;
 }
 
 nav.categoryNav {
-    background: #636466;
+    background: #A4A4A5;
     width: 100%;
     padding: 1%;
 }
@@ -1101,7 +1101,7 @@ nav.categoryNav ul li a {
 
 nav.categoryNav span {
     content: "\e60b";
-    color: #d5d4d3;
+    color: rgb(0, 91, 153);
 }
 
 nav.categoryNav span:hover {
@@ -1116,6 +1116,7 @@ nav.categoryNav .icon-myAlerts {
 nav.categoryNav .icon-myAlerts .path1:before {
     content: "\e60b";
     color: rgb(0, 91, 153);
+	
 }
 
 .detailCategory .details h3 {
