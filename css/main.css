@@ -545,7 +545,7 @@ header .icon-menu {
     background: none;
     line-height: 76px;
     display: block;
-    float: left;
+
 }
 
 .bankSection .icon-menu {
@@ -555,10 +555,7 @@ header .icon-menu {
     background: none;
     line-height: 76px;
     display: block;
-    float: left;
-    margin: 2px 0 0 6px;
 }
-
 img {
     display: block;
     max-width: 100%;
@@ -620,8 +617,8 @@ input, .btnAction {
     right: -4px;
     font-size: 69px;
     top: -5px;
-	
-	
+
+
 }
 
 .btnAction .icon-arrow .path1 {
@@ -884,7 +881,6 @@ label.css-label {
 
 #categories li {
     width: calc(100%);
-	
     overflow: hidden;
     height: 84px;
     border-bottom: 1px solid #e5e5e5;
@@ -895,7 +891,8 @@ label.css-label {
 #categories li .infoBank {
     float: left;
     width: calc(80.5% - 150px);
-
+    height: 92px;
+    position: relative;
 }
 
 #categories li .iconCat {
@@ -926,8 +923,9 @@ label.css-label {
     margin: 0;
     padding: 1% 0 0 0;
     width: 91%;
+    position: absolute;
+    bottom: 4px;
 }
-
 .dateBank .icon-primitive-dot {
     color: #95c807;
     font-size: 30px;
@@ -950,7 +948,7 @@ label.css-label {
     border: none;
     background: none;
     position: absolute;
-    right: calc(150px + 5px);
+    right: alc(150px + 5px);
     z-index: 1000;
     top: 16px;
 }
@@ -997,17 +995,14 @@ label.css-label {
 }
 
 #categories .details {
-    background: #e8e8e8;
-    padding: 2%;
+    background: #DBD9D9;
     width: 100%;
 	position: absolute;
 	top: calc(-22% - 0px);
 	left: 0px;
 	width: calc(100% - 20px);
 	height: 124px;
-	padding-left: 20px;
-	padding-right:20px;
-	
+	padding:20px;
 }
 
 #categories .centralLI {
@@ -1023,7 +1018,7 @@ label.css-label {
 	height: 104px;
 	left: 200%;
 	width: 150px;
-	
+
 
 }
 
@@ -1036,19 +1031,22 @@ height: 84px;
 }
 
 
+
 #categories .details h3 {
     color: #005b99;
     margin: 0;
-    font-size: 1em;
+    font-size: 0.8em;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%;
+    width: 96%;
     word-wrap: break-word;
-    max-height: 3.6em;
-    line-height: 20px;
-	
-	padding-left: 20px;
-	padding-right: 20px;
+    max-height: 5.6em;
+    line-height: 16px;
+    padding: 3% 4% 3% 4%;
+}
+
+#categories li:first-child .details h3{
+    padding: 5% 4% 3% 4%;
 }
 
 #categories .details .dateBank {
@@ -1216,6 +1214,7 @@ nav.categoryNav .icon-myAlerts .path1:before {
 
 .dropdownOption ul li .icon-arrow {
     top: 18% !important;
+    right: 2%;
 }
 
 .oneOption {
@@ -1359,6 +1358,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 
 }
 
+
 .contentMenu ul li button {
     font-size: 1.2em;
     display: block;
@@ -1378,7 +1378,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     color: #d5d4d3;
 }
 
-.contentMenu ul li button.active .icon-myAlerts .path1:before {
+.contentMenu ul li button:hover .icon-myAlerts .path1:before{
     content: "\e60b";
     color: rgb(26, 107, 163);
 }
@@ -1456,10 +1456,10 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     color: white;
     border: none;
     line-height: 50px;
-    width: 88%;
-    margin: 0 auto;
+    width: 100%;
     display: block;
-
+    position: absolute;
+    bottom: 11%;
 }
 
 .log {
@@ -1874,23 +1874,15 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
         padding: 13px 0 0 5px;
     }
 
-    header .icon-menu {
-        font-size: 46px;
-        width: 12%;
-        margin: 4px 0 0 0;
-    }
-
-    .bankSection .icon-menu {
-        margin: 2px 0 0 23px !important;
-    }
 
     header h2 {
         width: 65%;
+        font-size: 1.4em;
     }
 
     #settings h1 {
         width: 84%;
-        padding: 5% 0 0 0;
+        padding: 5% 0 6% 0;
         font-size: 1.5em;
     }
 
@@ -2005,18 +1997,32 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
         font-size: 20px;
     }
 
+    header .icon-back{
+        width: 11%;
+    }
+
+    #entities .newEntity {
+        font-size: 1.2em;
+        height: 50px;
+        line-height: 50px;
+        bottom: 10%;
+    }
     .topHeader .bankBrand {
         float: left;
         width: 45%;
         padding: 29px 0 0 0;
     }
+
+    .bankSection .icon-menu {
+        font-size: 46px;
+        line-height: 91px;
+
+    }
     .topHeader .bankBrand a{
         display: block;
     }
 
-    nav.categoryNav .icon-myAlerts {
-        font-size: 28px;
-    }
+
 
     #categories li .iconCat {
         width: 9%;
@@ -2059,10 +2065,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
         right: 24px;
     }
 
-    .bankSection .icon-menu {
-        font-size: 42px;
-        margin: 9px 0 0 6px;
-    }
+
 
     #categories li .icon-arrow .path2:before, #categories li .icon-arrow .path1:before {
         font-size: 35px;
@@ -2095,9 +2098,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
         padding: 0;
     }
 
-    #entities .newEntity {
-       line-height: 43px;
-    }
+
 
     .log {
         font-size: 18px !important;
@@ -2145,6 +2146,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     header h2 {
         line-height: 66px;
         padding: 10px 0 0 0;
+        font-size: 1.1em;
     }
 
     .products ul li button {
@@ -2156,10 +2158,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
         font-size: 1em;
     }
 
-    .bankSection .icon-menu {
-        margin: 0 6px 0 0!important;
-        line-height: 60px;
-    }
+
 
     .productNav .icon-myAlerts {
         font-size: 36px;
@@ -2223,7 +2222,8 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     }
 
     .bankSection h2 {
-        width: 71%;
+        width: 68%;
+        padding: 10px 0 0 10px;
     }
 }
 
@@ -2234,24 +2234,24 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 		max-height: 80px !important;
 		max-width: calc(100% - 100px) !important;
 	 }
- 
+
 	.menu-main{
 		position: absolute !important;
 		right: 10px;
-		top: 10px;	
+		top: 10px;
 	 }
-	 
+
 	 h4.user{
-		text-overflow: ellipsis !important; 
+		text-overflow: ellipsis !important;
 		white-space: nowrap;
 		width: 45% !important;
 	 }
-	 
+
 	 .welcome{
 		margin-top: 10px !important;
 	 }
-	 
-	 
+
+
 	 .noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
