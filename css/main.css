@@ -553,6 +553,7 @@ header .icon-menu {
     color: #FFFFFF;
     font-size: 51px;
     background: none;
+    line-height: 76px;
     display: block;
 }
 img {
@@ -868,7 +869,7 @@ label.css-label {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
-	overflow-y: auto;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     position: relative;
     z-index: 900;
@@ -947,7 +948,7 @@ label.css-label {
     border: none;
     background: none;
     position: absolute;
-    right: calc(150px + 5px);
+    right: alc(150px + 5px);
     z-index: 1000;
     top: 16px;
 }
@@ -984,7 +985,7 @@ label.css-label {
     font-size: 1.04em;
     text-transform: uppercase;
     border: none;
-   margin-left: 22px;
+    margin-left: 22px;
     z-index: 2000;
     right: 0;
     height: 100%;
@@ -996,37 +997,37 @@ label.css-label {
 #categories .details {
     background: #DBD9D9;
     width: 100%;
-	position: absolute;
-	top: calc(-22% - 0px);
-	left: 0px;
-	width: calc(100% - 20px);
-	height: 124px;
-	padding:20px;
+    position: absolute;
+    top: calc(-22% - 0px);
+    left: 0px;
+    width: calc(100% - 20px);
+    height: 124px;
+    padding:20px;
 }
 
 #categories .centralLI {
-	position: absolute;
-	top: 0px;
-	left: calc(100% + 20px);
-	width: calc(100% + 150px);
+    position: absolute;
+    top: 0px;
+    left: calc(100% + 20px);
+    width: calc(100% + 150px);
 }
 
 #categories .rightLI {
-	position: absolute;
-	top: calc(-22% - 0px);
-	height: 104px;
-	left: 200%;
-	width: 150px;
+    position: absolute;
+    top: calc(-22% - 0px);
+    height: 104px;
+    left: 200%;
+    width: 150px;
 
 
 }
 
 #categories  .moveContainer{
-position: relative;
-width: 100%;
-left: calc(-100% - 21px);
-overflow: visible;
-height: 84px;
+    position: relative;
+    width: 100%;
+    left: calc(-100% - 21px);
+    overflow: visible;
+    height: 84px;
 }
 
 
@@ -1726,7 +1727,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
         width: 40%!important;
     }
 }
-    @media (max-width: 1024px) {
+@media (max-width: 1024px) {
     #main {
         max-width: 100%;
     }
@@ -2012,6 +2013,11 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
         padding: 29px 0 0 0;
     }
 
+    .bankSection .icon-menu {
+        font-size: 46px;
+        line-height: 91px;
+
+    }
     .topHeader .bankBrand a{
         display: block;
     }
@@ -2221,32 +2227,32 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
     }
 }
 
-	img.bankLogo{
-		position: absolute;
-		top: 50%;
-		margin: -20px auto auto;
-		max-height: 80px !important;
-		max-width: calc(100% - 100px) !important;
-	 }
+img.bankLogo{
+    position: absolute;
+    top: 50%;
+    margin: -20px auto auto;
+    max-height: 80px !important;
+    max-width: calc(100% - 100px) !important;
+}
 
-	.menu-main{
-		position: absolute;
-		right: 10px;
-		top: 10px;
-	 }
+.menu-main{
+    position: absolute !important;
+    right: 10px;
+    top: 10px;
+}
 
-	 h4.user{
-		text-overflow: ellipsis !important;
-		white-space: nowrap;
-		width: 45% !important;
-	 }
+h4.user{
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    width: 45% !important;
+}
 
-	 .welcome{
-		margin-top: 10px !important;
-	 }
+.welcome{
+    margin-top: 10px !important;
+}
 
 
-	 .noselect {
+.noselect {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -2257,7 +2263,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 
 
 .Msg_info{
-	calc(100% - 150px) !important;
+calc(100% - 150px) !important;
 }
 
  
