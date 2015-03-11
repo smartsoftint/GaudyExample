@@ -1,94 +1,97 @@
-(function($) {
+
 	var tabSelectedColor 	= "rgb(0, 91, 153)";
 	var tabUnSelectedColor 	= "rgb(213, 212, 211)";
 	//Main Menu handle
-    $(".menu-main").tapend(function(e){
-		
-        //e.stopPropagation();
-		$('.allMenu').css({"width" : "80%" });
-		$('#menuAppriz').css({"display" : "block"});
-		$('.allMenu').velocity({"right" : "0px" },{ duration: 500 });
-		
-  
-    });
 	
-    $('.bgModal').tapend(function(e){
-        $('#menuAppriz').fadeOut(300);
-		$('.allMenu').css({"right" : "-80%"});
+$( document ).ready(function() {
+		$(".menu-main").tapend(function(e){
+			
+			//e.stopPropagation();
+			$('.allMenu').css({"width" : "80%" });
+			$('#menuAppriz').css({"display" : "block"});
+			$('.allMenu').velocity({"right" : "0px" },{ duration: 500 });
+			
+	  
+		});
 		
-    });
-	
-	//MSG Swipped 
-	$( document ).on("swipe", ".Message" ,function(a,b,c){
+		$('.bgModal').tapend(function(e){
+			$('#menuAppriz').fadeOut(300);
+			$('.allMenu').css({"right" : "-80%"});
+			
+		});
 		
-		var mContainer = $(this).find(".moveContainer");
-			console.log(JSON.stringify(b));
-	
-	//This will be for show the delete button 
-	if(b["startEvnt"]["position"]["x"] > b["endEvnt"]["position"]["x"]){
-		if(b["xAmount"] > 150){
-				mContainer.css({"margin-left" : "-150px"});
-		}else{
-					mContainer.css({"margin-left" : (b["xAmount"]*-1)+"px"});
-		}
-	}
-	//This could be to show the detail or hide the delete button
-	else{
+		//MSG Swipped 
+		$( document ).on("swipe", ".Message" ,function(a,b,c){
+			
+			var mContainer = $(this).find(".moveContainer");
+				console.log(JSON.stringify(b));
 		
-			mContainer.css({"margin-left" : b["xAmount"]+"px","overflow-x" :"visible"});
-		
-	}
-	});
-	
-	$( document ).on("swipeend", ".Message" ,function(a,b,c){
-		var mContainer = $(this).find(".moveContainer");
+		//This will be for show the delete button 
 		if(b["startEvnt"]["position"]["x"] > b["endEvnt"]["position"]["x"]){
-			if(b["xAmount"] < 151 &&  1){
-				mContainer.velocity({"margin-left" : "0px"});
-			}
-		}
-		else{
 			if(b["xAmount"] > 150){
-				
-				mContainer.velocity({"margin-left" : window.innerWidth+"px"},{ duration: 500 });
+					mContainer.css({"margin-left" : "-150px"});
 			}else{
-				mContainer.velocity({"margin-left" : "0px"});
+						mContainer.css({"margin-left" : (b["xAmount"]*-1)+"px"});
 			}
 		}
-	});
-	
-	
-	//Filter handle
-	
-	$( document ).on("tapend",'nav.categoryNav span',function(){
-		if( $(this).css("color") == tabSelectedColor){
-			$(this).css({content: "\e60b",color: tabUnSelectedColor});
-			$(this).find('.path1::before').css({color: tabUnSelectedColor});
-		
-		}else{
-			$(this).css({content: "\e60b",color: tabSelectedColor});
-			$(this).find('.path1').css({color: tabSelectedColor});
+		//This could be to show the detail or hide the delete button
+		else{
+			
+				mContainer.css({"margin-left" : b["xAmount"]+"px","overflow-x" :"visible"});
+			
 		}
+		});
+		
+		$( document ).on("swipeend", ".Message" ,function(a,b,c){
+			var mContainer = $(this).find(".moveContainer");
+			if(b["startEvnt"]["position"]["x"] > b["endEvnt"]["position"]["x"]){
+				if(b["xAmount"] < 151 &&  1){
+					mContainer.velocity({"margin-left" : "0px"});
+				}
+			}
+			else{
+				if(b["xAmount"] > 150){
+					
+					mContainer.velocity({"margin-left" : window.innerWidth+"px"},{ duration: 500 });
+				}else{
+					mContainer.velocity({"margin-left" : "0px"});
+				}
+			}
+		});
+		
+		
+		//Filter handle
+		
+		$( document ).on("tapend",'nav.categoryNav span',function(){
+			if( $(this).css("color") == tabSelectedColor){
+				$(this).css({content: "\e60b",color: tabUnSelectedColor});
+				$(this).find('.path1::before').css({color: tabUnSelectedColor});
+			
+			}else{
+				$(this).css({content: "\e60b",color: tabSelectedColor});
+				$(this).find('.path1').css({color: tabSelectedColor});
+			}
+		});
+		
+		$( document ).on("taphold",'nav.categoryNav span',function(){
+			$('nav.categoryNav span').css({content: "\e60b",color: tabUnSelectedColor});
+			$(this).find('.path1::before').css({color: tabUnSelectedColor});
+			//$(this).css({content: "\e60b",color: tabSelectedColor});
+		});
+		
+		
+		
+		//Menu Nav
+		
+		$( document ).on("tapend",'.navAppriz li',function(){
+			$($(".navAppriz .active").find("a").attr("menu-page")).hide();
+			$(".navAppriz .active").removeClass("active");
+			$(this).addClass("active");
+			$($(this).find("a").attr("menu-page")).show();
+		});
 	});
 	
-	$( document ).on("taphold",'nav.categoryNav span',function(){
-		$('nav.categoryNav span').css({content: "\e60b",color: tabUnSelectedColor});
-		$(this).find('.path1::before').css({color: tabUnSelectedColor});
-		//$(this).css({content: "\e60b",color: tabSelectedColor});
-	});
-	
-	
-	
-	//Menu Nav
-	
-	$( document ).on("tapend",'.navAppriz li',function(){
-		$($(".navAppriz .active").find("a").attr("menu-page")).hide();
-		$(".navAppriz .active").removeClass("active");
-		$(this).addClass("active");
-		$($(this).find("a").attr("menu-page")).show();
-	});
-	
-})(jQuery);
+
 
 
 
