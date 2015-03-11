@@ -3,6 +3,7 @@
 	var tabUnSelectedColor 	= "rgb(213, 212, 211)";
 	//Main Menu handle
 	
+	 document.addEventListener("deviceready", function(){alert("hola");}, false);
 $( document ).ready(function() {
 		$(".menu-main").tapend(function(e){
 			
