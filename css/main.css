@@ -553,7 +553,6 @@ header .icon-menu {
     color: #FFFFFF;
     font-size: 51px;
     background: none;
-    line-height: 76px;
     display: block;
 }
 img {
@@ -948,7 +947,7 @@ label.css-label {
     border: none;
     background: none;
     position: absolute;
-    right: alc(150px + 5px);
+    right: calc(150px + 5px);
     z-index: 1000;
     top: 16px;
 }
@@ -2013,11 +2012,6 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
         padding: 29px 0 0 0;
     }
 
-    .bankSection .icon-menu {
-        font-size: 46px;
-        line-height: 91px;
-
-    }
     .topHeader .bankBrand a{
         display: block;
     }
@@ -2236,7 +2230,7 @@ nav.navAppriz ul li.active a, nav.navAppriz ul li a:hover {
 	 }
 
 	.menu-main{
-		position: absolute !important;
+		position: absolute;
 		right: 10px;
 		top: 10px;
 	 }
